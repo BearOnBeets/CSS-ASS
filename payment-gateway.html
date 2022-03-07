@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        body{
+            background-color: cornsilk;
+            font-size: small;
+            font-family:Arial, Helvetica, sans-serif
+
+
+        }
+        .main{
+            display: flex;
+            flex-direction: row;
+            background-color: cornsilk;
+        }
+        .left{
+            background-color: cornsilk;
+            padding:10px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            
+            
+        }
+        .address{
+            background-color: white;
+            padding: 10px;
+            border: 1px solid black;
+            flex: 1;
+            margin-bottom: 10px;
+        }
+        .inneraddress{
+            padding: 10px;
+            border: 1px solid black;
+        }
+        .payment{
+            background-color: white;
+            border: 1px solid black;
+            flex: 1;
+            margin-bottom: 10px;
+        }
+        .paybutton{
+            background-color: white;
+            padding: 10px;
+            border: 1px solid black;
+            flex: 1;
+        }
+        .items{
+            border: 1px solid black;
+            flex: 1;
+        }
+        .right{
+            margin:10px;
+            padding: 10px;
+            background-color: white;
+            border: 1px solid black;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            max-height: 500px;
+        }
+        #input1{
+            display: inline-block;
+            width: 70%;
+            float: right;
+            clear: both;
+        }
+        .input{
+            border: none;
+            padding: 20px 20px;
+            color:gray;
+            /* border-top: 1px solid grey; */
+            border-bottom: 1px solid grey;
+        }
+    </style>
+
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Bank Of Daroda</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Mumbai,Maharashtra,India
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+            
+          </ul>
+          <form class="form-inline my-2 my-lg-0" > 
+            <ul class="nav-item dropdown">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </ul>
+            <ul class="nav-item dropdown">
+                <a class="navbar-brand" href="#">Help</a>
+            </ul>
+            <ul class="nav-item dropdown">
+                <a class="navbar-brand" href="#">User</a>
+            </ul>
+            <ul class="nav-item dropdown">
+                <a class="navbar-brand" href="#">Cart</a>
+            </ul>
+            
+          </form>
+        </div>
+      </nav>
+
+
+    <div class="main">
+        <div class="left" class="container-fluid">
+            <div class="address">
+                <h3>Select Address</h3>
+                <div class="inneraddress">
+                    <p>Home</p>
+                    <p>D/35,Bajrang Building,BD Road</p>
+                    <p>Pan Gali,Kanpur</p>
+                    <button class="btn btn-primary">Deliver Here</button>
+                </div>
+            </div>
+            <h3 style="padding: 5px;">Payment</h3>
+
+            <div class="payment">
+                <input type="text" class="input" placeholder="Card Number" style="width: 100%;"><br>
+                <input type="text" class="input" placeholder="Valid Through(MM/YY)" style="width: 63.5%;">
+                <input type="text" class="input" style="border-left: 1px solid gray;" placeholder="CVV" style="width: 100%;"><br>
+                <input type="text" class="input" placeholder="Name on Card" style="width: 100%;">
+            </div>
+            <div class="paybutton">
+                <button class="btn btn-primary">Pay Rs 500</button><h3 style="display: inline-block; float:right">Visa</h3>
+            </div>
+            
+        </div>
+        <div class="right">
+            <h3>Somali Fresh Mart</h3>
+            <p>Malad-West</p>
+            <hr style="width:50%;text-align:left;margin-left:0">
+            <span><p style="display: inline-block;">Tomato</p>
+            <input type="number" id="input1" class="form-control" placeholder="enter amount" value="2"><br></span>
+            <span><p style="display: inline-block;">Carrot </p>
+            <input type="number" id="input1" class="form-control" placeholder="enter amount"  value="3"><br></span>
+            <span><p style="display: inline-block;">Potato</p>
+            <input type="number" id="input1" class="form-control" placeholder="enter amount" value="1"><br></span>
+
+            <hr style="width:50%;text-align:left;margin-left:0"><br>
+            <p>Bill Details:</p>
+            <span>
+            <p style="display: inline-block;">Item Total:</p>
+            <p style="display: inline-block;float:right">450Rs</p>
+            </span>
+            <span>
+            <p style="display: inline-block;">Delivery:</p>
+            <p style="display: inline-block;float:right">50Rs</p>
+            </span>
+            <hr style="width:50%;text-align:left;margin-left:0"><br>
+            <span>
+                <p style="display: inline-block;">Total Payment:</p>
+                <p style="display: inline-block;float:right">500Rs</p>
+            </span>
+        </div>
+        
+    </div>
+      
+
+
+</body>
+</html>
